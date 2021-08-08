@@ -1,5 +1,5 @@
 # FlaskTaskManagementSampleApp<br>
-A simple flask application for managing tasks with backend admin access that is a prerequisite in attaining a certificate at pirple.com.<br>
+A simple flask application for managing tasks with backend admin access - pirple.com course (i.e Full Stack Web Development with Flask).<br>
 
 Users can reassign tasks to other colleagues <br>
 

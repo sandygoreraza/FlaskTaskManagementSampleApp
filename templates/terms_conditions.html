@@ -1,0 +1,52 @@
+{% extends "layout/bootstrap/structure.html" %}
+
+{% block main %}
+
+
+
+ <!-- Custom styles for this template -->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      
+      
+         .container {
+  max-width: 850px !important;
+}
+
+    </style>
+
+
+
+<main class="container" style="border-radius: 16px;">
+  <div class="bg-light p-5 rounded">
+    <h1>{{ message }}</h1>
+    <p class="lead">{{ message }}.</p>
+    <a class="btn btn-lg btn-primary" href="/" role="button">return &raquo;</a>
+    
+
+    
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+{% endblock main %}

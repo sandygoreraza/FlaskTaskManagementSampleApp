@@ -1,0 +1,53 @@
+{% extends "layout/bootstrap/structure.html" %}
+
+{% block main %}
+
+<meta name="theme-color" content="#7952b3">
+
+ <!-- Custom styles for this template -->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      
+      
+         .container {
+  max-width: 850px !important;
+}
+
+    </style>
+
+
+
+<main class="container" style="border-radius: 16px;">
+  <div class="bg-light p-5 rounded">
+    <h1>{{ message }}</h1>
+    <p class="lead">This example is a quick exercise to illustrate how the top-aligned layout works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+    <a class="btn btn-lg btn-primary" href="/" role="button">return &raquo;</a>
+    
+
+    
+  </div>
+</main>
+
+
+
+
+
+
+
+    <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+{% endblock main %}

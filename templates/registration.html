@@ -1,0 +1,162 @@
+{% extends "layout/bootstrap/structure.html" %}
+
+{% block main %}
+
+
+ <!-- Custom styles for this template -->
+   <style>
+   
+   
+.form-signup {
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  margin: auto;
+}
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+<div class="container">
+  
+<main class="form-signup">
+    <div class="text-center">
+    <img class="d-block mx-auto mb-4" src="https://img.icons8.com/office/80/000000/create-new.png"width="72" height="57"/>
+      <div class="alert alert-primary" role="alert">
+ {{ message }} - WITH VALIDATION
+</div>
+
+           </div>  
+  
+  
+<form class="row g-3 needs-validation" action="/registration" method="POST" novalidate>
+
+
+
+
+
+
+  <div class="form-floating">
+
+    <input type="text" class="form-control" name="fullname"  id="validationCustom01" placeholder="Mark" required>
+        <label for="validationCustom01">Enter your fullname *</label>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+
+   
+    <div class="form-floating">
+    
+      <input type="text" class="form-control" name="username" id="validationCustomUsername" placeholder="Username" required>
+      
+       <label for="validationCustomUsername" class="form-label">Username *</label>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+
+  
+  
+  <div class="form-floating">
+   
+    <input type="text" class="form-control" name="password" id="validationCustom03" placeholder="Password" required>
+    
+     <label for="validationCustom03">Password</label>
+     
+    <div class="invalid-feedback">
+      Please provide your password.
+    </div>
+  </div>
+
+
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions *
+      </label>
+      <div class="invalid-feedback">
+        You must agree before signup.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Signup</button>
+  </div>
+  
+  <p class="mt-5 mb-3 text-muted"><a href="/">Signin</a> | <a href="/about">About us</a> | <a href="/privacy">Privacy</a> | <a href="/terms_conditions">Terms & conditions</a></p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>  
+  
+  
+</form>
+
+
+</main>
+</div>
+
+
+
+
+
+
+<!--
+
+<form action="/registration" method="POST">
+
+
+<h4>{{ note  }}</h4>
+
+
+<label for="username">Fullname</label><br>
+    <input type="text" name="fullname" placeholder="please enter your fullname"><br>
+
+<label for="username">E-mail:</label><br>
+    <input type="text" name="username" placeholder="please enter your email address"><br>
+
+    <label for="username">Password: </label><br>
+
+    <input type="password" name="password" placeholder="Please enter your password"><br><br>
+
+    <input type="submit" name="register">
+
+<a href="/">return</a> 
+</form>-->
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+
+{% endblock main %}

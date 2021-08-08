@@ -1,0 +1,3 @@
+0 0 * * * /sandyflask sqlite3 flask_sandy.db .dump > backup.sql
+
+
